@@ -12,7 +12,8 @@ export class ImagenesComponente{
     constructor(){
         this.imgG=this.imgs[0];
     }
-    cambiaImagen(img:number){
+    //Le entra un número y devuelve vacío (por defecto en caso de que no se ponga nada)
+    cambiaImagen(img:number):void{
         this.imgG=this.imgs[img];
     } 
 }
