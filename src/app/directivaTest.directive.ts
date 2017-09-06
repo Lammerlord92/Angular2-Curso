@@ -3,37 +3,31 @@ import { Directive, ElementRef, Input } from '@angular/core';
 @Directive({
   selector: '[directivaTest]',
   host: {
-//    '(click)': 'onClick($event)',
-//    '(mouseleave)': 'onMouseLeave($event)',
-//    '(mouseenter)': 'onMouseEnter($event)'
+    '(mousemove)': 'onMouseMove($event)'
   }
 })
 
 export class DirectivaTest {
- /* @Input() color: string;
-  @Input() colorMouse: string;
-  @Input() texto: string;
 
-  colores:any;
-  textoTemp:string;
-*/  
+  varRatonX=0;
 
   constructor(private el: ElementRef) {
-      //this.colores = { Azul: 'blue', Negro: 'black', Rojo: 'red', Verde: 'green' };
       el.nativeElement.style.color='red';
   }
 
-/*  onClick() { 
+  onMouseMove(e:MouseEvent) { 
+      console.log("almacenado="+this.varRatonX);
+       console.log("X="+e.clientX);
+    if(e.clientX<(this.varRatonX-5)){
+         console.log("Menor");
+        this.el.nativeElement.style.fontSizeText=this.el.nativeElement.style.fontSize.fontSizeText-"1px";
+        this.varRatonX=e.clientX;
+    }else  if(e.clientX>(this.varRatonX+5)){
+        this.el.nativeElement.style.fontSizeText=this.el.nativeElement.style.fontSize+"1px";
+        this.varRatonX=e.clientX;
+        console.log("Mayor");
+    };
+    
+    
   }
-
-  onMouseEnter() { 
-    this.el.nativeElement.style.color = this.colores[this.colorMouse];
-    this.textoTemp = this.el.nativeElement.innerHTML;
-    if (this.texto != '') this.el.nativeElement.innerHTML = this.texto;
-  }
-  onMouseLeave() { 
-    this.el.nativeElement.style.color = this.colores[this.color];
-    this.el.nativeElement.innerHTML = this.textoTemp;
-  }
-*/
 }
