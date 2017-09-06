@@ -11,8 +11,6 @@ export class Calculadora{
     total:number;
 
     constructor(){
-        this.num1="0";
-        this.num2="0";
         this.total=0;
     }
     suma(){

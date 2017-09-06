@@ -3,11 +3,13 @@
 <br />
 <form>
     <label>Número 1</label>
-    <input type="text" [(ngModel)]="num1" name="num1" placeholder="Primer número">
+    <input type="text" [(ngModel)]="num1" #numero1="ngModel" placeholder="Primer número" pattern="[0-9]+" required [ngModelOptions]="{standalone: true}"/>
+    <div *ngIf="!numero1.valid" class="help-block" style="color:red">Introduce un número</div>
     <br />
     <br />
     <label>Número 2</label>
-    <input type="text" [(ngModel)]="num2" name="num2" placeholder="Segundo número">
+    <input type="text" [(ngModel)]="num2" #numero2="ngModel" placeholder="Segundo número" pattern="[0-9]+" required [ngModelOptions]="{standalone: true}"/>
+    <div *ngIf="!numero2.valid" class="help-block" style="color:red">Introduce un número</div>
 </form>
     <br />
     <br />
