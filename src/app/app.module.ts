@@ -8,14 +8,15 @@ import {FormsModule} from '@angular/forms';
 import { AppComponent }  from './app.component';
 //Añadidas por usuario
 import { ImagenesComponente }  from './imagenes.component';
+import { Calculadora }  from './calculadora.component';
 
 //imports: incluye en todos los componentes las importaciones añadidos
 //bootstrap: elemento donde se inicia nuestra App.
 //declarations: componentes de la app
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, ImagenesComponente ],
-  bootstrap:    [ ImagenesComponente ]
+  declarations: [ AppComponent, ImagenesComponente, Calculadora ],
+  bootstrap:    [ Calculadora ]
 })
 
 //Nombre debe coincider con el de main.ts

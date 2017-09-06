@@ -1,0 +1,17 @@
+<br />
+<h1>Resultado: </h1><h1 [innerHTML]="total"></h1>
+<br />
+<form>
+    <label>Número 1</label>
+    <input type="text" [(ngModel)]="num1" name="num1" placeholder="Primer número">
+    <br />
+    <br />
+    <label>Número 2</label>
+    <input type="text" [(ngModel)]="num2" name="num2" placeholder="Segundo número">
+</form>
+    <br />
+    <br />
+    <button (click)="suma()">Suma</button>
+    <button (click)="resta()">Resta</button>
+    <button (click)="multiplica()">Multiplicación</button>
+    <button (click)="divide()">Resultado</button>
