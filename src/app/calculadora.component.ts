@@ -8,23 +8,23 @@ import {Component} from '@angular/core';
 export class Calculadora{
     num1:string;
     num2:string;
-    total:number;
+    totalC:number;
 
     constructor(){
-        this.total=0;
+        this.totalC=0;
     }
     suma(){
         //También vale con parseFloat
-        this.total=Number(this.num1)+Number(this.num2);
+        this.totalC=Number(this.num1)+Number(this.num2);
     } 
     resta(){
-        this.total=Number(this.num1)-Number(this.num2);
+        this.totalC=Number(this.num1)-Number(this.num2);
     } 
     multiplica(){
-        this.total=Number(this.num1)*Number(this.num2);
+        this.totalC=Number(this.num1)*Number(this.num2);
     } 
     divide(){
-        this.total=Number(this.num1)/Number(this.num2);
+        this.totalC=Number(this.num1)/Number(this.num2);
     } 
 }
 
