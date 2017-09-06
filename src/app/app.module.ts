@@ -12,12 +12,13 @@ import { Calculadora }  from './calculadora.component';
 import { Resultado }  from './resultado.component';
 import { LimpiaDatos } from './limpiar.component';
 import { AddDecimales } from './addDecimales.pipe';
+import { DirectivaTest } from './directivaTest.directive';
 //imports: incluye en todos los componentes las importaciones añadidos
 //bootstrap: elemento donde se inicia nuestra App.
 //declarations: componentes de la app
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, ImagenesComponente, Calculadora,Resultado, LimpiaDatos, AddDecimales],
+  declarations: [ AppComponent, ImagenesComponente, Calculadora,Resultado, LimpiaDatos, AddDecimales,DirectivaTest],
   bootstrap:    [ Calculadora ]
 })
 
