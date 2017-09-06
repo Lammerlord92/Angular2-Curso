@@ -10,13 +10,13 @@ import { AppComponent }  from './app.component';
 import { ImagenesComponente }  from './imagenes.component';
 import { Calculadora }  from './calculadora.component';
 import { Resultado }  from './resultado.component';
-
+import { LimpiaDatos } from './limpiar.component';
 //imports: incluye en todos los componentes las importaciones añadidos
 //bootstrap: elemento donde se inicia nuestra App.
 //declarations: componentes de la app
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, ImagenesComponente, Calculadora,Resultado],
+  declarations: [ AppComponent, ImagenesComponente, Calculadora,Resultado, LimpiaDatos],
   bootstrap:    [ Calculadora ]
 })
 

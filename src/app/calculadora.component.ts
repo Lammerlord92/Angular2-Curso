@@ -11,6 +11,8 @@ export class Calculadora{
     totalC:number;
 
     constructor(){
+        this.num1="0";
+        this.num2="0";
         this.totalC=0;
     }
     suma(){
@@ -26,5 +28,9 @@ export class Calculadora{
     divide(){
         this.totalC=Number(this.num1)/Number(this.num2);
     } 
+    limpia(){
+        this.num1="0";this.num2="0";
+        this.totalC=0;
+    }
 }
 
